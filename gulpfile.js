@@ -2,8 +2,6 @@ var gulp        = require('gulp'),
     concat      = require('gulp-concat'),
     del         = require('del'), // rm -rf
     uglify      = require('gulp-uglify'),
-    babel      = require('gulp-babel'),
-    gutil     = require('gulp-util'),
     sass        = require('gulp-sass');
 
 gulp.task('delete', function() {
@@ -29,9 +27,7 @@ gulp.task('bundleJs', ['delete'], function () {
     jquery = './node_modules/jquery/dist/jquery.min.js';
   return gulp.src([localFiles, jquery])
           .pipe(concat('chatbot.min.js'))
-          .pipe(babel())
           .pipe(uglify())
-          .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
           .pipe(gulp.dest('statics/default/js'));
 });
 

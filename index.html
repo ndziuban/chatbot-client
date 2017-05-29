@@ -3,16 +3,16 @@
 </head>
 <body>
   <div class="chat-container">
-    <a class="chat-title" onclick="test()">
+    <a class="chat-title" onclick="initBot()">
       <span>Comenzar</span>
     </a>
-    <div class="chat-box">
-      <span class="chat-line">Hola, ingresa producto, categoria o problema.</span>
+    <div class="chat-window dont-show">
+      <div class="chat-box"></div>
+      <input type="text" placeholder="Escriba un mensaje..." class="chat-input"></input>
+      <button class="chat-send-button">
+        <span class="chat-send-button-text" onclick="chooseSearchType()">Enviar</span>
+      </button>
     </div>
-    <input type="text" placeholder="Escriba un mensaje..." class="chat-input"></input>
-    <button class="chat-send-button">
-      <span class="chat-send-button-text" onclick="test2()">Enviar</span>
-    </button>
   </div>
 
 

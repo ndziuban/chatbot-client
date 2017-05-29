@@ -1,7 +1,7 @@
 'use strict';
 // const Company = require('company');
 
-function test() {
+exports.test = function() {
   console.log("First ajax!")
   $.ajax({
     type: "GET",
@@ -19,7 +19,7 @@ function test() {
   });
 }
 
-function test2() {
+expots.test2 = function() {
   var company = new Company();
   $(".chat-box").append('<br><span class="chat-line">'+company.getText()+'</span>');
 }
